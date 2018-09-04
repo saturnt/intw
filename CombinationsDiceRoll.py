@@ -5,8 +5,11 @@ def roll_dice(count, chosen):
         return
     else:
         for idx in range(1, 7):
+            # Choose
             chosen.append(idx)
+            # Explore
             roll_dice(count-1, chosen)
+            # Unchoose
             chosen.pop()
 print roll_dice(3, [])
 
