@@ -53,8 +53,49 @@
                                                                                                  than elements on right, they have more candies than right index.
                                                                                                  
                                                                                                  
+>>>  3 sum closest(to 1):
+
+    We will sort the array and then fix the positions and search for the next 2 elements:
+
+    Given an array with index nums[0..N]
     
+    1) nums.sort()
+    2)
+        target=1
+        final_tuple=inf
+        for i from 0 < N-2;
+            curr_num=nums[i]  
+            left=i+1
+            right=N-1
+            while(left < right):
+                curr_tuple=curr_num+left+right
+                
+                # If we are on the right side of target i.e. 1 - we need to come back so decrement target.
+                if curr_tuple == target:
+                    break
+                if curr_tuple > target:
+                    right=right-1
+                else:
+                    left=left+1
+                if abs(curr_tuple - target) < final_tuple:
+                    final_tuple=curr_tuple
+     
     
+                
+            
+          
+          
+          
+          
+           
+           
+           
+        
     
+
+
+
+
+
     
     
