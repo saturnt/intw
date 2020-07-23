@@ -1,0 +1,26 @@
+>>> Find first missing positive number:
+    
+    The first missing positive number would be between 1 and N(Remember to start from 1 and not zero).
+    So any number greater than N and/or any negative number can be set to (N+1), if we encounter a number (N+1) we simply ignore it.
+    
+    As we traverse through the array simply set the number at that position to -ive. if already negative then dont touch it - otherwise number would become positive.
+    Once done, traverse the array again and search for a positive number. if the positive number is found then that index is the answer.
+    
+    e.g.
+        3 4 -1 1 is given.
+        
+    nums:  3 4 -1  1
+    idx:   1 2  3  4
+    
+    step 1: set negative numver to N+1
+    nums: 3 4 5  1
+    
+    step 2: start traversing and setting number for that index as negative.
+     nums: 3 4  -5   1    idx: 0
+     nums: 3 4  -5  -1    idx: 1
+     nums: 3 4  -5  -1    idx: 2 ignored since abs(-5) > len(nums)
+     nums: -3 4 -5  -1    idx: 3, value 1 (so set index 1 as -3) 
+     
+     Traverse array again and see that 2 is missing since value at idx 2 is possitive and less than N
+     
+   
