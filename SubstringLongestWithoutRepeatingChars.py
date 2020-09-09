@@ -1,3 +1,9 @@
+'''
+    Basically here we use start and a ptr, ptr goes throught the list.
+    start points to the start of the unique char string, we use hash table to track the
+    positions of the repeated chars, quite intricate.
+'''
+
 class Solution(object):
     
     def longest_sub_wo_repeating_chars(self, given_str):
